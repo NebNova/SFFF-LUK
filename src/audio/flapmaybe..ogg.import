@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/flapmaybe..ogg-9ea44e0068f1f4d39cecac499248ede9.oggstr"
+
+[deps]
+
+source_file="res://src/audio/flapmaybe..ogg"
+dest_files=[ "res://.import/flapmaybe..ogg-9ea44e0068f1f4d39cecac499248ede9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

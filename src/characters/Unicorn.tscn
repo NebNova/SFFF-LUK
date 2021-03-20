@@ -1,9 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://src/assets/Graphics/unicorn king flap cropped.png" type="Texture" id=1]
-[ext_resource path="res://src/assets/SFX/flapmaybe..ogg" type="AudioStream" id=2]
-[ext_resource path="res://src/assets/Graphics/Unicorn King Cropped.png" type="Texture" id=3]
+[ext_resource path="res://src/assets/unicorn king flap cropped.png" type="Texture" id=1]
+[ext_resource path="res://src/audio/flapmaybe..ogg" type="AudioStream" id=2]
+[ext_resource path="res://src/assets/Unicorn King Cropped.png" type="Texture" id=3]
 [ext_resource path="res://src/scripts/Dandelion.gd" type="Script" id=5]
+
+
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 875.629, 893.268 )

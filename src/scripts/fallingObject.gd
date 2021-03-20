@@ -1,10 +1,12 @@
 extends RigidBody2D
 
-var move = Vector2(-1.5, 5)
+var move = Vector2(-1.5, 5) # Sets object movement vector
 
-func _physics_process(delta: float) -> void:
+# Moves object every frame
+func _physics_process(_delta: float) -> void:
 	apply_central_impulse(move)
 
+# Deletes object on collision
 func _on_body_entered(body: Node) -> void:
-	print(body.name)
-	queue_free() # Replace with function body.
+	# print(body.name)
+	queue_free()

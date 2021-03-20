@@ -1,7 +1,6 @@
 extends KinematicBody2D
 
 export (int) var speed = 500 # Sets generic speed
-onready var anim_player: AnimationPlayer = get_node("AnimationPlayer")
 
 var velocity = Vector2() # Sets genertic movement speed to zero
 
@@ -9,10 +8,12 @@ var velocity = Vector2() # Sets genertic movement speed to zero
 func _ready() -> void:
 	pass # Replace with function body.
 
+# Gets input and moves Dandy accordingly
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
 
+# Dandy movment
 func get_input():
 	velocity = Vector2()
 	if Input.is_action_pressed('right'):

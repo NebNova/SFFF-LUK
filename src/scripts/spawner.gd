@@ -10,7 +10,7 @@ var health = preload("res://src/characters/HealthUp.tscn") # Preload health scen
 # var dino = preload("")
 # var barbie = preload("")
 
-var rng = RandomNumberGenerator.new()
+var rng = RandomNumberGenerator.new() # New RNG
 
 onready var spawnPos = get_node("FallingObject").position # Gets spawn position
 
@@ -24,4 +24,4 @@ func spawnFallingObject() -> void:
 
 
 func _on_Timer_timeout() -> void:
-	spawnFallingObject() # Replace with function body.
+	spawnFallingObject() # Calls object spawn on timer timout
