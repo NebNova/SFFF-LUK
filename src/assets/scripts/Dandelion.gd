@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export (int) var speed = 500 # Sets generic speed
 
-var velocity = Vector2() # Sets genertic movement speed to zero
+var velocity = Vector2() # Velocity variable
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

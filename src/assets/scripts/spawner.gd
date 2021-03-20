@@ -16,6 +16,7 @@ onready var FOspawnPos = get_node("FallingObject").position # Gets spawn positio
 onready var sockPos = get_node("Sock").position
 
 func _ready() -> void:
+	yield(get_tree().create_timer(5.0), "timeout")
 	spawnSock() # Calls Sock spawn fucntion
 
 func spawnFallingObject() -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/assets/sock puppet cropped.png" type="Texture" id=1]
 [ext_resource path="res://src/assets/sock puppet bite cropped.png" type="Texture" id=2]
@@ -36,6 +36,10 @@ tracks/1/keys = {
 "values": [ Vector2( 0.1, -0.1 ) ]
 }
 
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 51.953
+height = 107.558
+
 [node name="SockPuppet" type="KinematicBody2D"]
 collision_layer = 2
 collision_mask = 257
@@ -53,3 +57,10 @@ shape = SubResource( 1 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Sock Puppet Bite"
 "anims/Sock Puppet Bite" = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -14.2705, 29.1356 )
+shape = SubResource( 3 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
