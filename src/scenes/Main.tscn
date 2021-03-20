@@ -26,7 +26,7 @@ wait_time = 2.0
 autostart = true
 
 [node name="Sock" type="Position2D" parent="Evniroment spawner"]
-position = Vector2( 770.261, 104.271 )
+position = Vector2( 770.261, 141.271 )
 
 [node name="dino" type="Position2D" parent="Evniroment spawner"]
 position = Vector2( 697.944, 549.946 )
