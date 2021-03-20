@@ -9,7 +9,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 # Gets input and moves Dandy accordingly
-func _physics_process(delta):
+func _physics_process(_delta):
 	get_input()
 	velocity = move_and_slide(velocity)
 

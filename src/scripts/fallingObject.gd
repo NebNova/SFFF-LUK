@@ -7,6 +7,6 @@ func _physics_process(_delta: float) -> void:
 	apply_central_impulse(move)
 
 # Deletes object on collision
-func _on_body_entered(body: Node) -> void:
+func _on_body_entered(_body: Node) -> void:
 	# print(body.name)
 	queue_free()
