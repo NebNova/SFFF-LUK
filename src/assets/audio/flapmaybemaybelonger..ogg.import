@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/flapmaybemaybelonger..ogg-d89f2d80f26729773a378d4541b77363.oggstr"
+
+[deps]
+
+source_file="res://src/assets/audio/flapmaybemaybelonger..ogg"
+dest_files=[ "res://.import/flapmaybemaybelonger..ogg-d89f2d80f26729773a378d4541b77363.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

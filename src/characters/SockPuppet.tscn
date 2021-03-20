@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/assets/sock puppet cropped.png" type="Texture" id=1]
 [ext_resource path="res://src/assets/sock puppet bite cropped.png" type="Texture" id=2]
+[ext_resource path="res://src/assets/scripts/SockPuppet.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 49.0049
@@ -38,6 +39,7 @@ tracks/1/keys = {
 [node name="SockPuppet" type="KinematicBody2D"]
 collision_layer = 2
 collision_mask = 257
+script = ExtResource( 3 )
 
 [node name="sock_puppet_cropped" type="Sprite" parent="."]
 rotation = -2.53518e-06
