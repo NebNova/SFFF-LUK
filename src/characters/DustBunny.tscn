@@ -6,6 +6,8 @@
 radius = 557.35
 
 [node name="Node2D" type="Area2D"]
+collision_layer = 32
+collision_mask = 257
 
 [node name="dust_bunny_cropped" type="Sprite" parent="."]
 texture = ExtResource( 1 )

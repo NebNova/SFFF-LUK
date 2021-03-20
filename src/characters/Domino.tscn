@@ -7,6 +7,7 @@ radius = 42.0786
 height = 82.5141
 
 [node name="Domino" type="Area2D"]
+collision_layer = 1280
 
 [node name="domino_2" type="Sprite" parent="."]
 position = Vector2( 1.85883, 2.00627 )

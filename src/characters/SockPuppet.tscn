@@ -7,6 +7,8 @@ radius = 49.0049
 height = 109.48
 
 [node name="SockPuppet" type="Area2D"]
+collision_layer = 2
+collision_mask = 257
 
 [node name="sock_puppet_cropped" type="Sprite" parent="."]
 rotation = 3.14159

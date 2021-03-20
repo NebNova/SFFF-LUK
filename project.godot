@@ -121,6 +121,10 @@ laser={
 2d_physics/layer_6="Dust Bunny"
 2d_physics/layer_7="Lego Dinosaur"
 2d_physics/layer_8="Wall"
+2d_physics/layer_9="Despawn"
+2d_physics/layer_10="Jack"
+2d_physics/layer_11="Domino"
+2d_physics/layer_12="PowerUp"
 
 [rendering]
 
