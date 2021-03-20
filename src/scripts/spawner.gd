@@ -12,16 +12,24 @@ var health = preload("res://src/characters/HealthUp.tscn") # Preload health scen
 
 var rng = RandomNumberGenerator.new() # New RNG
 
-onready var spawnPos = get_node("FallingObject").position # Gets spawn position
+onready var FOspawnPos = get_node("FallingObject").position # Gets spawn position for falling objects
+onready var sockPos = get_node("Sock").position
+
+func _ready() -> void:
+	spawnSock() # Calls Sock spawn fucntion
 
 func spawnFallingObject() -> void:
 	randomize() # Randomize RNG
 	var fallingObjects = [jack, domino] # Set Objects as part of array
 	var fallingObject = fallingObjects[randi() % fallingObjects.size()] # Chose random object from array
 	var FOSpawn = fallingObject.instance() # Set object scene instance
-	FOSpawn.position = spawnPos # Set object spawn position
+	FOSpawn.position = FOspawnPos # Set object spawn position
 	add_child(FOSpawn) # Add spawned object as child node
 
+func spawnSock() -> void:
+	var sockSpawn = sock.instance()
+	sockSpawn.position = sockPos
+	add_child(sockSpawn)
 
 func _on_Timer_timeout() -> void:
 	spawnFallingObject() # Calls object spawn on timer timout
