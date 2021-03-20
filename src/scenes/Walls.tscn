@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 76.6985, 2039.87 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 90.9661, 1782.28 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 63.028, 1713.93 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 1784.78, 109.795 )
+
+[node name="Walls" type="Node2D"]
+
+[node name="Desapwn" type="Area2D" parent="."]
+position = Vector2( 513.183, 300.298 )
+scale = Vector2( 0.315, 0.184187 )
+collision_layer = 256
+collision_mask = 3710
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desapwn"]
+position = Vector2( -1555.9, 20.5212 )
+shape = SubResource( 1 )
+
+[node name="wall" type="StaticBody2D" parent="."]
+position = Vector2( 513.183, 300.298 )
+scale = Vector2( 0.315, 0.184187 )
+collision_layer = 128
+collision_mask = 1537
+
+[node name="Right Wall" type="CollisionShape2D" parent="wall"]
+position = Vector2( 1705.99, 12.1222 )
+shape = SubResource( 2 )
+
+[node name="Left Wall" type="CollisionShape2D" parent="wall"]
+position = Vector2( -1679.78, 10.8058 )
+shape = SubResource( 3 )
+
+[node name="Ceiling" type="CollisionShape2D" parent="wall"]
+position = Vector2( 32.244, -1729.99 )
+shape = SubResource( 4 )
+
+[node name="Floor" type="CollisionShape2D" parent="wall"]
+position = Vector2( 28.507, 1724.98 )
+shape = SubResource( 4 )
