@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 export (int) var speed = 500 # Sets generic speed
+onready var anim_player: AnimationPlayer = get_node("AnimationPlayer")
 
 var velocity = Vector2() # Sets genertic movement speed to zero
 

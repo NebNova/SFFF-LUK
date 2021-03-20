@@ -125,6 +125,7 @@ laser={
 2d_physics/layer_10="Jack"
 2d_physics/layer_11="Domino"
 2d_physics/layer_12="PowerUp"
+2d_physics/layer_13="Ceiling"
 
 [rendering]
 

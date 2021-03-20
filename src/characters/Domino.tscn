@@ -1,20 +1,28 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/assets/domino_2.png" type="Texture" id=1]
+[ext_resource path="res://src/scripts/fallingObject.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 42.0786
-height = 82.5141
+radius = 94.3491
+height = 178.878
 
-[node name="Domino" type="Area2D"]
-collision_layer = 1280
+[node name="Domino" type="RigidBody2D"]
+scale = Vector2( 0.5, 0.5 )
+collision_layer = 1024
+collision_mask = 129
+contacts_reported = 1
+contact_monitor = true
+script = ExtResource( 2 )
 
 [node name="domino_2" type="Sprite" parent="."]
 position = Vector2( 1.85883, 2.00627 )
-scale = Vector2( 0.4, 0.4 )
+scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 2.64865, 3.17838 )
+position = Vector2( 2.52826, 2.76424 )
 rotation = -0.683473
+scale = Vector2( 0.2, 0.2 )
 shape = SubResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

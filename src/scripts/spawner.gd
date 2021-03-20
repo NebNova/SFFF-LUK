@@ -10,14 +10,18 @@ var health = preload("res://src/characters/HealthUp.tscn") # Preload health scen
 # var dino = preload("")
 # var barbie = preload("")
 
-onready var spawnPos = get_node("Position2D").position # Gets spawn position
+var rng = RandomNumberGenerator.new()
 
-func spawnjack() -> void:
-	var jackSpawn = jack.instance() # Set jack scene instance
-	jackSpawn.position = spawnPos # Set jack spawn position
-	add_child(jackSpawn) # Add spawned jack as child node
+onready var spawnPos = get_node("FallingObject").position # Gets spawn position
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	spawnjack() # Calls Jack Spawn fuction
+func spawnFallingObject() -> void:
+	randomize() # Randomize RNG
+	var fallingObjects = [jack, domino] # Set Objects as part of array
+	var fallingObject = fallingObjects[randi() % fallingObjects.size()] # Chose random object from array
+	var FOSpawn = fallingObject.instance() # Set object scene instance
+	FOSpawn.position = spawnPos # Set object spawn position
+	add_child(FOSpawn) # Add spawned object as child node
 
+
+func _on_Timer_timeout() -> void:
+	spawnFallingObject() # Replace with function body.
