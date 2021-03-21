@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/exit cropped.png-52cb42b3e6e93083a44ed80dad91421b.stex"
+path="res://.import/unicorn king wingless cropped.png-e56f39e27f9770eb2ce1e9fd71e2dc07.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/exit cropped.png"
-dest_files=[ "res://.import/exit cropped.png-52cb42b3e6e93083a44ed80dad91421b.stex" ]
+source_file="res://src/assets/graphics/unicorn king wingless cropped.png"
+dest_files=[ "res://.import/unicorn king wingless cropped.png-e56f39e27f9770eb2ce1e9fd71e2dc07.stex" ]
 
 [params]
 

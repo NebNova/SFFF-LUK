@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/candy cropped.png-0fee7ede9c915e2b16b5aa5a4675cd61.stex"
+path="res://.import/title cropped.png-18896c525d2d1ffde1131fcf39e70796.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/candy cropped.png"
-dest_files=[ "res://.import/candy cropped.png-0fee7ede9c915e2b16b5aa5a4675cd61.stex" ]
+source_file="res://src/assets/graphics/title cropped.png"
+dest_files=[ "res://.import/title cropped.png-18896c525d2d1ffde1131fcf39e70796.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

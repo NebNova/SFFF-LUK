@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dust bunny no ears cropped.png-6205d956f9775866f78068f8051e8bc9.stex"
+path="res://.import/unicorn king flap cropped.png-654f22ab0c45323040b9065f50aede99.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/dust bunny no ears cropped.png"
-dest_files=[ "res://.import/dust bunny no ears cropped.png-6205d956f9775866f78068f8051e8bc9.stex" ]
+source_file="res://src/assets/graphics/unicorn king flap cropped.png"
+dest_files=[ "res://.import/unicorn king flap cropped.png-654f22ab0c45323040b9065f50aede99.stex" ]
 
 [params]
 

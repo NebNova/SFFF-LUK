@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heart cropped.png-1ebd0449cd9655bd70ef2bdea7e45819.stex"
+path="res://.import/goldfish head cropped.png-cda4f4026b4b98d58026f7a7eb069bf2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/heart cropped.png"
-dest_files=[ "res://.import/heart cropped.png-1ebd0449cd9655bd70ef2bdea7e45819.stex" ]
+source_file="res://src/assets/graphics/goldfish head cropped.png"
+dest_files=[ "res://.import/goldfish head cropped.png-cda4f4026b4b98d58026f7a7eb069bf2.stex" ]
 
 [params]
 

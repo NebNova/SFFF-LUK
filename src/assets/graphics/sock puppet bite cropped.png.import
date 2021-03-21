@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Elements-30.png-e2c326dbaf24d6256be0e38479abf94c.stex"
+path="res://.import/sock puppet bite cropped.png-e6c2bd81d2fcfc607b85b47399937230.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/Elements-30.png"
-dest_files=[ "res://.import/Elements-30.png-e2c326dbaf24d6256be0e38479abf94c.stex" ]
+source_file="res://src/assets/graphics/sock puppet bite cropped.png"
+dest_files=[ "res://.import/sock puppet bite cropped.png-e6c2bd81d2fcfc607b85b47399937230.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/background.png-b5547696cfd831b3ca01219052602b83.stex"
+path="res://.import/goldfish_cropped.png-7e8fab12a6f3076fc110460b974918ce.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/background.png"
-dest_files=[ "res://.import/background.png-b5547696cfd831b3ca01219052602b83.stex" ]
+source_file="res://src/assets/graphics/goldfish_cropped.png"
+dest_files=[ "res://.import/goldfish_cropped.png-7e8fab12a6f3076fc110460b974918ce.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dino_5_body.png-0a365f45975c9fc3255a7252410ff7ea.stex"
+path="res://.import/Unicorn King Cropped.png-ad2f0e098112d3c663444abd18fbf4c2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/dino_5_body.png"
-dest_files=[ "res://.import/dino_5_body.png-0a365f45975c9fc3255a7252410ff7ea.stex" ]
+source_file="res://src/assets/graphics/Unicorn King Cropped.png"
+dest_files=[ "res://.import/Unicorn King Cropped.png-ad2f0e098112d3c663444abd18fbf4c2.stex" ]
 
 [params]
 
