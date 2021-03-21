@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/assets/graphics/title cropped.png" type="Texture" id=1]
+
+[node name="Title" type="Label"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -86.0
+margin_top = 177.99
+margin_right = 86.0
+margin_bottom = 191.99
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 85, 31.91 )
+scale = Vector2( 0.236, 0.318 )
+texture = ExtResource( 1 )
