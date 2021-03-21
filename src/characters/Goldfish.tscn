@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://src/assets/goldfish head cropped.png" type="Texture" id=1]
-[ext_resource path="res://src/assets/goldfish body cropped.png" type="Texture" id=2]
+[ext_resource path="res://src/assets/graphics/goldfish head cropped.png" type="Texture" id=1]
+[ext_resource path="res://src/assets/graphics/goldfish body cropped.png" type="Texture" id=2]
 [ext_resource path="res://src/assets/scripts/AttackChar.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -76,13 +76,13 @@ disabled = true
 autoplay = "Goldfish Bite"
 "anims/Goldfish Bite" = SubResource( 2 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Goldfish" type="Area2D" parent="."]
 position = Vector2( 1.98425, -10.3181 )
 collision_layer = 16
 collision_mask = 257
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Goldfish"]
 position = Vector2( -7.93701, -14.2866 )
 rotation = 1.5708
 shape = SubResource( 3 )
-[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Goldfish" to="." method="_on_Area2D_area_entered"]

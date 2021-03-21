@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dino_5_head.png-40f357d42f5b113200b763c540aed119.stex"
+path="res://.import/sock_puppet_cropped.png-4218c5bd258698bf2129226e15a66a9e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/dino_5_head.png"
-dest_files=[ "res://.import/dino_5_head.png-40f357d42f5b113200b763c540aed119.stex" ]
+source_file="res://src/assets/graphics/sock_puppet_cropped.png"
+dest_files=[ "res://.import/sock_puppet_cropped.png-4218c5bd258698bf2129226e15a66a9e.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jack_cropped.png-72e599bf9b6b6bb3f615b3457753ccf7.stex"
+path="res://.import/Elements-42.png-ed91273040083a893ddf55c87d4ffd60.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/jack_cropped.png"
-dest_files=[ "res://.import/jack_cropped.png-72e599bf9b6b6bb3f615b3457753ccf7.stex" ]
+source_file="res://src/assets/graphics/Elements-42.png"
+dest_files=[ "res://.import/Elements-42.png-ed91273040083a893ddf55c87d4ffd60.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/domino_2.png-6144ac9230f416b5b5211963579767b7.stex"
+path="res://.import/goldfish body cropped.png-7104236cf2c9db9acd40baa6d49bd947.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/domino_2.png"
-dest_files=[ "res://.import/domino_2.png-6144ac9230f416b5b5211963579767b7.stex" ]
+source_file="res://src/assets/graphics/goldfish body cropped.png"
+dest_files=[ "res://.import/goldfish body cropped.png-7104236cf2c9db9acd40baa6d49bd947.stex" ]
 
 [params]
 

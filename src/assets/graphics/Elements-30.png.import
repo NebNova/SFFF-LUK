@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dust bunny ears cropped.png-9966355d53cf7426cf1b29b4fc134818.stex"
+path="res://.import/Elements-30.png-40d81581afd36d73106537987bfff4b5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/dust bunny ears cropped.png"
-dest_files=[ "res://.import/dust bunny ears cropped.png-9966355d53cf7426cf1b29b4fc134818.stex" ]
+source_file="res://src/assets/graphics/Elements-30.png"
+dest_files=[ "res://.import/Elements-30.png-40d81581afd36d73106537987bfff4b5.stex" ]
 
 [params]
 
