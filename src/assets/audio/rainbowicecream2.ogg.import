@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/rainbowicecream2.ogg-1f49afb8b4c24940987de4edcad88f90.oggstr"
+
+[deps]
+
+source_file="res://src/assets/audio/rainbowicecream2.ogg"
+dest_files=[ "res://.import/rainbowicecream2.ogg-1f49afb8b4c24940987de4edcad88f90.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

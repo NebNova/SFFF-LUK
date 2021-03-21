@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Main Scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/assets/audio/rainbowicecreamedit.ogg" type="AudioStream" id=2]
@@ -6,6 +6,47 @@
 [ext_resource path="res://src/assets/scripts/Main.gd" type="Script" id=4]
 [ext_resource path="res://src/assets/scripts/spawner.gd" type="Script" id=5]
 [ext_resource path="res://src/Main Scenes/Walls.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/assets/audio/rainbowicecream2.ogg" type="AudioStream" id=7]
+[ext_resource path="res://src/assets/audio/rainbowicecream3.ogg" type="AudioStream" id=8]
+
+[sub_resource type="Animation" id=2]
+resource_name = "endMusic"
+tracks/0/type = "audio"
+tracks/0/path = NodePath("AnimationPlayer/EndMusic")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "midMusic"
+tracks/0/type = "audio"
+tracks/0/path = NodePath("AnimationPlayer/MiddleMusic")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "startMusic"
+tracks/0/type = "audio"
+tracks/0/path = NodePath("StartMusic")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
 
 [node name="Main" type="Node2D"]
 position = Vector2( -31.0013, -19.6609 )
@@ -58,10 +99,24 @@ position = Vector2( 120, 120 )
 wait_time = 4.0
 autostart = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "startMusic"
+anims/endMusic = SubResource( 2 )
+anims/midMusic = SubResource( 3 )
+anims/startMusic = SubResource( 1 )
+
+[node name="StartMusic" type="AudioStreamPlayer" parent="AnimationPlayer"]
 stream = ExtResource( 2 )
 volume_db = -20.0
 autoplay = true
+
+[node name="MiddleMusic" type="AudioStreamPlayer" parent="AnimationPlayer"]
+stream = ExtResource( 7 )
+volume_db = -20.0
+
+[node name="EndMusic" type="AudioStreamPlayer" parent="AnimationPlayer"]
+stream = ExtResource( 8 )
+volume_db = -20.0
 [connection signal="timeout" from="Evniroment spawner/FOTimer" to="Evniroment spawner" method="_on_FOTimer_timeout"]
 [connection signal="timeout" from="Evniroment spawner/attackTimer" to="Evniroment spawner" method="_on_attackTimer_timeout"]
 [connection signal="timeout" from="Evniroment spawner/increaseDifficultyTimer" to="Evniroment spawner" method="_on_increaseDifficultyTimer_timeout"]

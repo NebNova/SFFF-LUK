@@ -2,6 +2,7 @@ extends Node2D
 
 var dandelion = preload("res://src/characters/Unicorn.tscn") # Preloads Dandy
 var dandyPOS = Vector2(200,320) # Sets Dandys spawn vector
+onready var anim_player: AnimationPlayer = get_node("AnimationPlayer")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

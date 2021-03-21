@@ -61,7 +61,7 @@ margin_right = 402.0
 
 [node name="Exit" parent="Menu" instance=ExtResource( 3 )]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="StartMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 volume_db = -20.0
 autoplay = true
