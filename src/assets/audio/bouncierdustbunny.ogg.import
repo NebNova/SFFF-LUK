@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bouncierdustbunny.ogg-381ded36b1cfbe1daf148ee51b3437cb.oggstr"
+
+[deps]
+
+source_file="res://src/assets/audio/bouncierdustbunny.ogg"
+dest_files=[ "res://.import/bouncierdustbunny.ogg-381ded36b1cfbe1daf148ee51b3437cb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

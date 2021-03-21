@@ -1,15 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/assets/graphics/dust bunny no ears cropped.png" type="Texture" id=1]
 [ext_resource path="res://src/assets/graphics/dust bunny ears cropped.png" type="Texture" id=2]
 [ext_resource path="res://src/assets/scripts/AttackChar.gd" type="Script" id=3]
+[ext_resource path="res://src/assets/audio/bouncierdustbunny.ogg" type="AudioStream" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 481.179
 
 [sub_resource type="Animation" id=2]
 resource_name = "Dust Bunny Attack"
-length = 3.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("dust_bunny_cropped/dust bunny ears cropped:rotation_degrees")
@@ -42,10 +42,32 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5, 1.6, 2.1 ),
+"times": PoolRealArray( 0, 0.2, 0.5, 0.7 ),
 "transitions": PoolRealArray( 0.164939, 0.0563282, 0.0507658, 0.0915055 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, -70 ), Vector2( 0, 0 ), Vector2( 0, -70 ) ]
+}
+tracks/3/type = "audio"
+tracks/3/path = NodePath("AudioStreamPlayer2D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 
 [sub_resource type="CircleShape2D" id=3]
@@ -58,10 +80,12 @@ collision_mask = 257
 script = ExtResource( 3 )
 
 [node name="dust_bunny_cropped" type="Sprite" parent="."]
+position = Vector2( 0, -69.9913 )
 texture = ExtResource( 1 )
 
 [node name="dust bunny ears cropped" type="Sprite" parent="dust_bunny_cropped"]
-position = Vector2( 0.834351, -447.375 )
+position = Vector2( 169.014, -417.103 )
+rotation = 0.605629
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -79,4 +103,8 @@ collision_mask = 257
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DustBunny"]
 shape = SubResource( 3 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = -32.83
 [connection signal="area_entered" from="DustBunny" to="." method="_on_Area2D_area_entered"]
