@@ -12,27 +12,35 @@
 [sub_resource type="Animation" id=2]
 resource_name = "endMusic"
 tracks/0/type = "audio"
-tracks/0/path = NodePath("AnimationPlayer/EndMusic")
+tracks/0/path = NodePath("EndMusic")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+} ],
+"times": PoolRealArray( 0 )
 }
 
 [sub_resource type="Animation" id=3]
 resource_name = "midMusic"
 tracks/0/type = "audio"
-tracks/0/path = NodePath("AnimationPlayer/MiddleMusic")
+tracks/0/path = NodePath("MiddleMusic")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+} ],
+"times": PoolRealArray( 0 )
 }
 
 [sub_resource type="Animation" id=1]
@@ -44,8 +52,12 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+} ],
+"times": PoolRealArray( 0 )
 }
 
 [node name="Main" type="Node2D"]
@@ -99,25 +111,28 @@ position = Vector2( 120, 120 )
 wait_time = 4.0
 autostart = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="MusicPlayer" type="AnimationPlayer" parent="."]
 autoplay = "startMusic"
 anims/endMusic = SubResource( 2 )
 anims/midMusic = SubResource( 3 )
 anims/startMusic = SubResource( 1 )
 
-[node name="StartMusic" type="AudioStreamPlayer" parent="AnimationPlayer"]
+[node name="musicTimer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="StartMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 volume_db = -20.0
-autoplay = true
 
-[node name="MiddleMusic" type="AudioStreamPlayer" parent="AnimationPlayer"]
+[node name="MiddleMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 volume_db = -20.0
 
-[node name="EndMusic" type="AudioStreamPlayer" parent="AnimationPlayer"]
+[node name="EndMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 volume_db = -20.0
 [connection signal="timeout" from="Evniroment spawner/FOTimer" to="Evniroment spawner" method="_on_FOTimer_timeout"]
 [connection signal="timeout" from="Evniroment spawner/attackTimer" to="Evniroment spawner" method="_on_attackTimer_timeout"]
 [connection signal="timeout" from="Evniroment spawner/increaseDifficultyTimer" to="Evniroment spawner" method="_on_increaseDifficultyTimer_timeout"]
 [connection signal="timeout" from="Evniroment spawner/CandyTimer" to="Evniroment spawner" method="_on_CandyTimer_timeout"]
+[connection signal="timeout" from="musicTimer" to="." method="_on_musicTimer_timeout"]
