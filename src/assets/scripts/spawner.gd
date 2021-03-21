@@ -83,7 +83,7 @@ func spawnAttacker() -> void:
 			add_child(goldSpawn)
 
 func increaseDifficultyStart() -> void:
-	if difficultyIncrease == false:
+	if not difficultyIncrease:
 		difficultyIncrease = true
 		get_node("increaseDifficultyTimer").start(20.0)
 	else:
