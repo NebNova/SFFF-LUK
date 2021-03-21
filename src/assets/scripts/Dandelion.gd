@@ -4,6 +4,8 @@ export (int) var speed = 500 # Sets generic speed
 
 var velocity = Vector2() # Velocity variable
 
+onready var anim_player: AnimationPlayer = get_node("Unicorn_Flying_2s/AnimationPlayer")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -29,11 +31,13 @@ func get_input():
 
 func _on_UnicornArea_area_entered(area: Area2D) -> void:
 	print(area.name)
-	die()
+	if area.name == "Candy":
+		pass
+	else:
+		die()
 
 func die() -> void:
-	
 	PlayerData.deaths += 1
-	queue_free()
+	anim_player.play("Death")
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://src/Main Scenes/EndScreen.tscn")

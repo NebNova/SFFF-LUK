@@ -5,9 +5,9 @@ var sock = preload("res://src/characters/SockPuppet.tscn") # Preload sock scene
 var goldF = preload("res://src/characters/Goldfish.tscn") # Preload goldfish scene
 var dustB = preload("res://src/characters/DustBunny.tscn") # Preload dustbunny scene
 var domino = preload("res://src/characters/Domino.tscn") # Preload domino scene
-var coin = preload("res://src/characters/Coin.tscn") # Preload coin scene
+var candy = preload("res://src/characters/Candy.tscn") # Preload candy scene
 var health = preload("res://src/characters/HealthUp.tscn") # Preload health scene
-var dino = preload("res://src/characters/Dino.tscn")
+var dino = preload("res://src/characters/Dino.tscn") # Preaload Dino Scene
 
 var difficultyIncrease = false
 var spawns = 0
@@ -17,6 +17,8 @@ var diffHC = 0
 
 var rng = RandomNumberGenerator.new() # New RNG
 
+onready var CandyPos = get_node("candy").position
+var CandySpawnPos = Vector2()
 onready var FOPos = get_node("FallingObject").position # Gets spawn position for falling objects
 var FOspawnPos = Vector2()
 onready var sockPos = get_node("Sock").position
@@ -29,6 +31,12 @@ func randomFOPos() -> void:
 	FOspawnPos = FOPos
 	randomize()
 	FOspawnPos.x = (randi() % 900 + FOPos.x)
+
+func randomCandyPos() -> void:
+	CandySpawnPos = CandyPos
+	randomize()
+	CandySpawnPos.x = (randi() % 850 + CandyPos.x)
+	CandySpawnPos.y = (randi() % 450 + CandyPos.y)
 
 func spawnFallingObject() -> void:
 	randomFOPos()
@@ -107,3 +115,10 @@ func _on_increaseDifficultyTimer_timeout() -> void:
 		get_node("attackTimer").start(attackTime)
 	else:
 		pass
+
+
+func _on_CandyTimer_timeout() -> void:
+	randomCandyPos()
+	var CandySpawn = candy.instance() # Set candy scene instance
+	CandySpawn.position = CandySpawnPos # Set candy spawn position
+	add_child(CandySpawn)
