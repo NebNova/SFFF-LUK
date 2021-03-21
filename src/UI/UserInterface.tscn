@@ -41,6 +41,7 @@ scale = Vector2( 0.0809773, 0.11811 )
 texture = ExtResource( 9 )
 
 [node name="PauseOverlay" type="ColorRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.235294 )
