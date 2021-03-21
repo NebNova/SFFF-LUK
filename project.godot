@@ -23,6 +23,10 @@ _global_script_class_icons={
 config/name="Legend of the Unicorn King"
 config/icon="res://icon.png"
 
+[autoload]
+
+MainScreen="*res://src/Main Scenes/MainScreen.tscn"
+
 [gdnative]
 
 singletons=[ "res://git_api.gdnlib" ]

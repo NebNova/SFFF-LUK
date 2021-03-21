@@ -8,5 +8,5 @@ func _physics_process(_delta: float) -> void:
 
 # Deletes object on collision
 func _on_body_entered(_body: Node) -> void:
-	# print(body.name)
+	print(_body.name)
 	queue_free()

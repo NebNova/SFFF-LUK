@@ -8,31 +8,25 @@ var domino = preload("res://src/characters/Domino.tscn") # Preload domino scene
 var coin = preload("res://src/characters/Coin.tscn") # Preload coin scene
 var health = preload("res://src/characters/HealthUp.tscn") # Preload health scene
 var dino = preload("res://src/characters/Dino.tscn")
-# var barbie = preload("")
+
 
 var rng = RandomNumberGenerator.new() # New RNG
 
-onready var FOspawnPos = get_node("FallingObject").position # Gets spawn position for falling objects
+onready var FOPos = get_node("FallingObject").position # Gets spawn position for falling objects
+var FOspawnPos = Vector2()
 onready var sockPos = get_node("Sock").position
 onready var dustPos = get_node("dust").position
 onready var dinoPos = get_node("dino").position
 onready var goldPos = get_node("gold").position
 
-func _ready() -> void:
-	yield(get_tree().create_timer(5.0), "timeout")
-	spawnSock() # Calls Sock spawn fucntion
-	yield(get_tree().create_timer(5.0), "timeout")
-	spawnDust()
-	yield(get_tree().create_timer(5.0), "timeout")
-	spawnGold()
-	yield(get_tree().create_timer(5.0), "timeout")
-	spawnSock() # Calls Sock spawn fucntion
-	yield(get_tree().create_timer(5.0), "timeout")
-	spawnDino()
-	yield(get_tree().create_timer(5.0), "timeout")
-	spawnGold()
+
+func randomFOPos() -> void:
+	FOspawnPos = FOPos
+	randomize()
+	FOspawnPos.x = (randi() % 700 + FOPos.x)
 
 func spawnFallingObject() -> void:
+	randomFOPos()
 	randomize() # Randomize RNG
 	var fallingObjects = [jack, domino] # Set Objects as part of array
 	var fallingObject = fallingObjects[randi() % fallingObjects.size()] # Chose random object from array
@@ -40,25 +34,29 @@ func spawnFallingObject() -> void:
 	FOSpawn.position = FOspawnPos # Set object spawn position
 	add_child(FOSpawn) # Add spawned object as child node
 
-func spawnSock() -> void:
-	var sockSpawn = sock.instance()
-	sockSpawn.position = sockPos
-	add_child(sockSpawn)
+func spawnAttacker() -> void:
+	randomize()
+	var attackers = [sock, dustB, dino, goldF]
+	var attacker = attackers[randi() % attackers.size()]
+	if attacker == sock:
+		var sockSpawn = sock.instance()
+		sockSpawn.position = sockPos
+		add_child(sockSpawn)
+	elif attacker == dustB:
+		var dustSpawn = dustB.instance()
+		dustSpawn.position = dustPos
+		add_child(dustSpawn)
+	elif attacker == dino:
+		var dinoSpawn = dino.instance()
+		dinoSpawn.position = dinoPos
+		add_child(dinoSpawn)
+	elif attacker == goldF:
+		var goldSpawn = goldF.instance()
+		goldSpawn.position = goldPos
+		add_child(goldSpawn)
 
-func spawnDust() -> void:
-	var dustSpawn = dustB.instance()
-	dustSpawn.position = dustPos
-	add_child(dustSpawn)
+func _on_attackTimer_timeout() -> void:
+	spawnAttacker()
 
-func spawnDino() -> void:
-	var dinoSpawn = dino.instance()
-	dinoSpawn.position = dinoPos
-	add_child(dinoSpawn)
-
-func spawnGold() -> void:
-	var goldSpawn = goldF.instance()
-	goldSpawn.position = goldPos
-	add_child(goldSpawn)
-
-func _on_Timer_timeout() -> void:
-	spawnFallingObject() # Calls object spawn on timer timout
+func _on_FOTimer_timeout() -> void:
+	spawnFallingObject() # Replace with function body.

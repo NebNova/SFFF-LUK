@@ -8,5 +8,4 @@ func _ready() -> void:
 	var dandy = dandelion.instance() # Set Dandy scene instance
 	dandy.position = dandyPOS # Set Dandy spawn position
 	add_child(dandy) # Adds Dandy as child node
-
-
+	

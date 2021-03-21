@@ -19,21 +19,26 @@ position = Vector2( 26.6968, 22.6923 )
 script = ExtResource( 5 )
 
 [node name="FallingObject" type="Position2D" parent="Evniroment spawner"]
-position = Vector2( 454.604, 64.8993 )
+position = Vector2( 200, 100 )
 
-[node name="Timer" type="Timer" parent="Evniroment spawner"]
+[node name="FOTimer" type="Timer" parent="Evniroment spawner"]
 wait_time = 2.0
 autostart = true
 
 [node name="Sock" type="Position2D" parent="Evniroment spawner"]
-position = Vector2( 931.713, 141.271 )
+position = Vector2( 930, 140 )
 
 [node name="dino" type="Position2D" parent="Evniroment spawner"]
-position = Vector2( 894.222, 488.515 )
+position = Vector2( 895, 485 )
 
 [node name="dust" type="Position2D" parent="Evniroment spawner"]
-position = Vector2( 897.343, 521.325 )
+position = Vector2( 900, 520 )
 
 [node name="gold" type="Position2D" parent="Evniroment spawner"]
-position = Vector2( 987.384, 346.109 )
-[connection signal="timeout" from="Evniroment spawner/Timer" to="Evniroment spawner" method="_on_Timer_timeout"]
+position = Vector2( 990, 350 )
+
+[node name="attackTimer" type="Timer" parent="Evniroment spawner"]
+wait_time = 5.0
+autostart = true
+[connection signal="timeout" from="Evniroment spawner/FOTimer" to="Evniroment spawner" method="_on_FOTimer_timeout"]
+[connection signal="timeout" from="Evniroment spawner/attackTimer" to="Evniroment spawner" method="_on_attackTimer_timeout"]
