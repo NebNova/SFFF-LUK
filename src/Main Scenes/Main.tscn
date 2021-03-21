@@ -55,7 +55,7 @@ wait_time = 20.0
 position = Vector2( 120, 120 )
 
 [node name="CandyTimer" type="Timer" parent="Evniroment spawner"]
-wait_time = 3.0
+wait_time = 4.0
 autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
