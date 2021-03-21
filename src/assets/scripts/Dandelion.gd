@@ -32,6 +32,8 @@ func _on_UnicornArea_area_entered(area: Area2D) -> void:
 	die()
 
 func die() -> void:
+	
 	PlayerData.deaths += 1
 	queue_free()
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://src/Main Scenes/EndScreen.tscn")

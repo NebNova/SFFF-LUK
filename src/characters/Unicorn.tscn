@@ -104,7 +104,7 @@ position = Vector2( -4.68213, 6.22852 )
 shape = SubResource( 1 )
 
 [node name="Unicorn_Flying_2s" type="Area2D" parent="."]
-position = Vector2( 0, -19.8198 )
+position = Vector2( 0, -19.9324 )
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Unicorn_Flying_2s"]
