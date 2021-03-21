@@ -45,14 +45,9 @@ autostart = true
 [node name="increaseDifficultyTimer" type="Timer" parent="Evniroment spawner"]
 wait_time = 20.0
 
-<<<<<<< HEAD
-[node name="Coin" parent="." instance=ExtResource( 2 )]
-position = Vector2( 365.981, 448.547 )
-=======
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 autoplay = true
->>>>>>> d0ee9366541d4f198840297fe29d7bed23367a8f
 [connection signal="timeout" from="Evniroment spawner/FOTimer" to="Evniroment spawner" method="_on_FOTimer_timeout"]
 [connection signal="timeout" from="Evniroment spawner/attackTimer" to="Evniroment spawner" method="_on_attackTimer_timeout"]
 [connection signal="timeout" from="Evniroment spawner/increaseDifficultyTimer" to="Evniroment spawner" method="_on_increaseDifficultyTimer_timeout"]
