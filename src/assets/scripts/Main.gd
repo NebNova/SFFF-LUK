@@ -17,9 +17,11 @@ func _ready() -> void:
 
 func _on_musicTimer_timeout() -> void:
 	if musicTrack == 0:
+		anim_player.stop(true)
 		anim_player.play("midMusic")
 		musicTrack += 1
 	elif musicTrack == 1:
+		anim_player.stop(true)
 		anim_player.play("endMusic")
 		musicTrack += 1
 		musicTimer.stop()
