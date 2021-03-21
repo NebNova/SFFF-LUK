@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/jack3.ogg-039ec00db1513c0b97205aad30d1f5fd.oggstr"
+
+[deps]
+
+source_file="res://src/assets/audio/jack3.ogg"
+dest_files=[ "res://.import/jack3.ogg-039ec00db1513c0b97205aad30d1f5fd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

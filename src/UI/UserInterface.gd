@@ -18,7 +18,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		scene_tree.set_input_as_handled()
 
 func update_interface() -> void:
-	score.text = "Score: %s" % PlayerData.score
+	score.text = "%s" % PlayerData.score
 
 func set_paused(value: bool) -> void:
 	paused = value

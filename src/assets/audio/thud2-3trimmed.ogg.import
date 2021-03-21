@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/thud2-3trimmed.ogg-c951e52f03b4b80f50629b88089e22f9.oggstr"
+
+[deps]
+
+source_file="res://src/assets/audio/thud2-3trimmed.ogg"
+dest_files=[ "res://.import/thud2-3trimmed.ogg-c951e52f03b4b80f50629b88089e22f9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
