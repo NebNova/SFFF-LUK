@@ -28,7 +28,7 @@ onready var goldPos = get_node("gold").position
 func randomFOPos() -> void:
 	FOspawnPos = FOPos
 	randomize()
-	FOspawnPos.x = (randi() % 700 + FOPos.x)
+	FOspawnPos.x = (randi() % 900 + FOPos.x)
 
 func spawnFallingObject() -> void:
 	randomFOPos()

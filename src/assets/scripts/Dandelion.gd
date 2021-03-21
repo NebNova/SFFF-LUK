@@ -25,3 +25,7 @@ func get_input():
 	if Input.is_action_pressed('up'):
 		velocity.y -= 1
 	velocity = velocity.normalized() * speed
+
+
+func _on_UnicornArea_area_entered(area: Area2D) -> void:
+	print(area.name)

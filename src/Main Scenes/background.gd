@@ -1,5 +1,5 @@
 extends Sprite
-const VELOCITY: float = -10.5
+const VELOCITY: float = -10.0
 var g_texture_width: float = 0
 
 func _ready() -> void:

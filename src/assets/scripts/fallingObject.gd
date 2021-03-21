@@ -2,7 +2,6 @@ extends RigidBody2D
 
 var move = Vector2(-1.5, 5) # Sets object movement vector
 
-# Moves object every frame
 func _physics_process(_delta: float) -> void:
 	apply_central_impulse(move)
 

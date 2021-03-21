@@ -59,11 +59,11 @@ disabled = true
 autoplay = "Sock Puppet Bite"
 "anims/Sock Puppet Bite" = SubResource( 2 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="SockPuppet" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 257
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SockPuppet"]
 position = Vector2( -12.9342, 28.6901 )
 shape = SubResource( 3 )
-[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="SockPuppet" to="." method="_on_Area2D_area_entered"]
