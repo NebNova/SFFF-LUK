@@ -4,7 +4,7 @@ export (int) var speed = 150 # Speed variable
 var velocity = Vector2() # Velocity variable
 
 func _ready() -> void:
-	pass # Replace with function body.
+	pass 
 
 func _physics_process(_delta):
 	velocity = Vector2(-speed, 0)
