@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/UI/UserInterface.gd" type="Script" id=1]
 [ext_resource path="res://src/UI/Title.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/UI/Play.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/UI/PlayFromPause.gd" type="Script" id=5]
 [ext_resource path="res://src/assets/graphics/deaths.png" type="Texture" id=6]
+[ext_resource path="res://src/assets/graphics/paused.png" type="Texture" id=7]
 [ext_resource path="res://src/assets/graphics/score.png" type="Texture" id=9]
 
 [node name="UserInterface" type="Control"]
@@ -40,7 +41,14 @@ margin_left = 477.014
 margin_top = 101.975
 margin_right = 527.014
 margin_bottom = 115.975
-text = "Paused!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="PauseOverlay/Paused"]
+position = Vector2( 24.676, 5.94604 )
+scale = Vector2( 0.192075, 0.143771 )
+texture = ExtResource( 7 )
 
 [node name="Score" type="Sprite" parent="PauseOverlay"]
 position = Vector2( 357.322, 300 )
