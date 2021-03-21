@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/UI/UserInterface.gd" type="Script" id=1]
 [ext_resource path="res://src/UI/Title.tscn" type="PackedScene" id=2]
@@ -6,7 +6,13 @@
 [ext_resource path="res://src/UI/Play.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/UI/PlayFromPause.gd" type="Script" id=5]
 [ext_resource path="res://src/assets/graphics/deaths.png" type="Texture" id=6]
+[ext_resource path="res://Hello Mozza.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://src/assets/graphics/paused.png" type="Texture" id=8]
 [ext_resource path="res://src/assets/graphics/score.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 7 )
 
 [node name="UserInterface" type="Control"]
 pause_mode = 2
@@ -18,11 +24,21 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 931.804
-margin_top = 23.0173
-margin_right = 993.804
-margin_bottom = 37.0173
-text = "score: %s"
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 933.065
+margin_top = 23.4377
+margin_right = 995.065
+margin_bottom = 45.4377
+custom_fonts/font = SubResource( 1 )
+text = "%s"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Label"]
+position = Vector2( -21.0088, 9.38715 )
+scale = Vector2( 0.0809773, 0.11811 )
+texture = ExtResource( 9 )
 
 [node name="PauseOverlay" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -39,17 +55,42 @@ margin_left = 477.014
 margin_top = 101.975
 margin_right = 527.014
 margin_bottom = 115.975
-text = "Paused!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="PauseOverlay/Paused"]
+position = Vector2( 23.3345, 8.83881 )
+scale = Vector2( 0.133976, 0.110617 )
+texture = ExtResource( 8 )
 
 [node name="Score" type="Sprite" parent="PauseOverlay"]
 position = Vector2( 357.322, 300 )
 scale = Vector2( 0.17662, 0.221 )
 texture = ExtResource( 9 )
 
+[node name="ScoreNum" type="Label" parent="PauseOverlay/Score"]
+margin_left = 268.0
+margin_top = -91.0
+margin_right = 601.0
+margin_bottom = 97.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Death" type="Sprite" parent="PauseOverlay"]
 position = Vector2( 624.701, 300 )
 scale = Vector2( 0.192897, 0.19992 )
 texture = ExtResource( 6 )
+
+[node name="DeathNum" type="Label" parent="PauseOverlay/Death"]
+margin_left = 223.0
+margin_top = -84.9741
+margin_right = 570.0
+margin_bottom = 93.0259
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Menu" type="VBoxContainer" parent="PauseOverlay"]
 anchor_left = 0.5
