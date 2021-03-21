@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Legend of the Unicorn King"
+run/main_scene="res://src/scenes/Main.tscn"
 config/icon="res://icon.png"
 
 [gdnative]
