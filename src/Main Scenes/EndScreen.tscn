@@ -1,0 +1,91 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://src/assets/graphics/background.png" type="Texture" id=1]
+[ext_resource path="res://src/assets/graphics/play cropped.png" type="Texture" id=2]
+[ext_resource path="res://src/assets/graphics/exit cropped.png" type="Texture" id=3]
+[ext_resource path="res://src/UI/Play.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/UI/Exit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/UI/Title.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/UI/ExitButton.gd" type="Script" id=7]
+[ext_resource path="res://src/UI/PlayButton.gd" type="Script" id=8]
+
+[node name="EndScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -425.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background2" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 598.926
+margin_right = 173.591
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="." instance=ExtResource( 6 )]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -86.0
+margin_top = 74.0
+margin_right = 86.0
+margin_bottom = 139.0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.5
+margin_top = -22.0
+margin_right = 369.5
+margin_bottom = 493.0
+rect_scale = Vector2( 0.25, 0.25 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="Menu" instance=ExtResource( 4 )]
+margin_right = 402.0
+margin_bottom = 259.0
+icon = ExtResource( 2 )
+flat = true
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="Menu" instance=ExtResource( 5 )]
+margin_top = 263.0
+margin_right = 402.0
+margin_bottom = 515.0
+icon = ExtResource( 3 )
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="Menu/Play" to="Menu/Play" method="_on_Play_button_up"]
+[connection signal="button_up" from="Menu/Exit" to="Menu/Exit" method="_on_Exit_button_up"]
