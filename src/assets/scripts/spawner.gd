@@ -9,6 +9,11 @@ var coin = preload("res://src/characters/Coin.tscn") # Preload coin scene
 var health = preload("res://src/characters/HealthUp.tscn") # Preload health scene
 var dino = preload("res://src/characters/Dino.tscn")
 
+var difficultyIncrease = false
+var spawns = 0
+var FOTime = 2.0
+var attackTime = 10.0
+var diffHC = 0
 
 var rng = RandomNumberGenerator.new() # New RNG
 
@@ -35,28 +40,70 @@ func spawnFallingObject() -> void:
 	add_child(FOSpawn) # Add spawned object as child node
 
 func spawnAttacker() -> void:
-	randomize()
-	var attackers = [sock, dustB, dino, goldF]
-	var attacker = attackers[randi() % attackers.size()]
-	if attacker == sock:
+	if spawns == 0 or spawns == 4:
 		var sockSpawn = sock.instance()
 		sockSpawn.position = sockPos
 		add_child(sockSpawn)
-	elif attacker == dustB:
+		spawns += 1
+	elif spawns == 1 or spawns == 5:
 		var dustSpawn = dustB.instance()
 		dustSpawn.position = dustPos
 		add_child(dustSpawn)
-	elif attacker == dino:
+		spawns += 1
+	elif spawns == 2 or spawns == 6:
 		var dinoSpawn = dino.instance()
 		dinoSpawn.position = dinoPos
 		add_child(dinoSpawn)
-	elif attacker == goldF:
+		spawns += 1
+	elif spawns == 3 or spawns == 7:
 		var goldSpawn = goldF.instance()
 		goldSpawn.position = goldPos
 		add_child(goldSpawn)
+		spawns +=1
+	else:
+		increaseDifficultyStart()
+		randomize()
+		var attackers = [sock, dustB, dino, goldF]
+		var attacker = attackers[randi() % attackers.size()]
+		if attacker == sock:
+			var sockSpawn = sock.instance()
+			sockSpawn.position = sockPos
+			add_child(sockSpawn)
+		elif attacker == dustB:
+			var dustSpawn = dustB.instance()
+			dustSpawn.position = dustPos
+			add_child(dustSpawn)
+		elif attacker == dino:
+			var dinoSpawn = dino.instance()
+			dinoSpawn.position = dinoPos
+			add_child(dinoSpawn)
+		elif attacker == goldF:
+			var goldSpawn = goldF.instance()
+			goldSpawn.position = goldPos
+			add_child(goldSpawn)
+
+func increaseDifficultyStart() -> void:
+	if difficultyIncrease == false:
+		difficultyIncrease = true
+		get_node("increaseDifficultyTimer").start(20.0)
+	else:
+		pass
 
 func _on_attackTimer_timeout() -> void:
 	spawnAttacker()
 
 func _on_FOTimer_timeout() -> void:
-	spawnFallingObject() # Replace with function body.
+	spawnFallingObject()
+
+func _on_increaseDifficultyTimer_timeout() -> void:
+	if diffHC <= 35:
+		print(diffHC)
+		diffHC += 1
+		FOTime -= 0.03
+		print(FOTime)
+		attackTime -= 0.2
+		print(attackTime)
+		get_node("FOTimer").start(FOTime)
+		get_node("attackTimer").start(attackTime)
+	else:
+		pass

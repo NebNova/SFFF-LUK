@@ -10,7 +10,7 @@ extents = Vector2( 90.9661, 1782.28 )
 extents = Vector2( 63.028, 1713.93 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 1784.78, 109.795 )
+extents = Vector2( 2786.02, 109.795 )
 
 [node name="Walls" type="Node2D"]
 
@@ -21,7 +21,7 @@ collision_layer = 256
 collision_mask = 3710
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Despawn"]
-position = Vector2( 515.969, 1333.89 )
+position = Vector2( -331.879, 1359.26 )
 shape = SubResource( 1 )
 
 [node name="wall" type="StaticBody2D" parent="."]
@@ -35,7 +35,7 @@ position = Vector2( 3501.88, 1852.2 )
 shape = SubResource( 2 )
 
 [node name="Left Wall" type="CollisionShape2D" parent="wall"]
-position = Vector2( 116.107, 1850.88 )
+position = Vector2( 110.785, 1859.5 )
 shape = SubResource( 3 )
 
 [node name="Ceiling" type="StaticBody2D" parent="."]

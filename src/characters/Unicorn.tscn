@@ -68,7 +68,7 @@ tracks/3/keys = {
 [node name="Unicorn" type="KinematicBody2D"]
 position = Vector2( 200, 320 )
 scale = Vector2( 0.08, 0.08 )
-collision_mask = 3710
+collision_mask = 0
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -76,10 +76,12 @@ position = Vector2( 0, -12.5 )
 shape = SubResource( 1 )
 
 [node name="Unicorn_Flying_2s" type="Area2D" parent="."]
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Unicorn_Flying_2s"]
 visible = false
 shape = SubResource( 2 )
+disabled = true
 
 [node name="Unicorn King Cropped" type="Sprite" parent="Unicorn_Flying_2s"]
 texture = ExtResource( 1 )
@@ -95,3 +97,9 @@ stream = ExtResource( 2 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -2500, -4000 )
 anchor_mode = 0
+
+[node name="UnicornArea" type="Area2D" parent="."]
+collision_mask = 3698
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="UnicornArea"]
+polygon = PoolVector2Array( 825.598, -281.683, 788.056, -98.1431, 429.317, -23.0583, 452.26, 396.165, 339.633, 809.131, 183.207, 817.474, 118.55, 686.076, 143.578, 460.821, -54.562, 540.077, -261.045, 469.164, -300.673, 819.56, -500.899, 855.016, -609.355, 654.79, -630.212, 565.105, -853.38, 464.993, -719.896, 43.6836, -646.897, -12.6296, -609.355, 12.3984, -409.129, -102.314, -27.448, -110.657, 99.7791, -171.142, 101.865, -214.941, 58.0652, -198.256, 14.2659, -260.826, -6.59106, -385.968, 1.75171, -546.566, 53.8938, -644.593, 103.95, -723.849, 489.802, -865.676, 619.115, -782.248, 813.084, -828.134, 769.285, -655.021, 854.798, -588.279, 848.541, -548.652, 729.656, -523.623, 746.342, -360.939 )

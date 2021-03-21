@@ -10,7 +10,7 @@ height = 178.878
 [node name="Domino" type="RigidBody2D"]
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 1024
-collision_mask = 8321
+collision_mask = 8320
 contacts_reported = 1
 contact_monitor = true
 script = ExtResource( 2 )
@@ -25,4 +25,14 @@ position = Vector2( 2.52826, 2.76424 )
 rotation = -0.683473
 scale = Vector2( 0.2, 0.2 )
 shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 1024
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 2.52826, 2.76424 )
+rotation = -0.683473
+scale = Vector2( 0.2, 0.2 )
+shape = SubResource( 1 )
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

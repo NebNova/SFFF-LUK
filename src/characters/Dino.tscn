@@ -33,7 +33,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 79.1181, 139.539 )
+extents = Vector2( 51.6618, 129.335 )
 
 [node name="Dino" type="KinematicBody2D"]
 script = ExtResource( 3 )
@@ -62,6 +62,6 @@ collision_layer = 64
 collision_mask = 257
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -4.71939, 8.02293 )
+position = Vector2( -7.09781, 15.7528 )
 shape = SubResource( 2 )
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

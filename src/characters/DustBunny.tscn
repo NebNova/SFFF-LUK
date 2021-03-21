@@ -49,7 +49,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 522.77
+radius = 409.882
 
 [node name="DustBunny" type="KinematicBody2D"]
 scale = Vector2( 0.23, 0.23 )
