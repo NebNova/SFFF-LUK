@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/candycrinkle1.ogg-1c0274567bee250a37fd13468f9d0437.oggstr"
+
+[deps]
+
+source_file="res://src/assets/audio/candycrinkle1.ogg"
+dest_files=[ "res://.import/candycrinkle1.ogg-1c0274567bee250a37fd13468f9d0437.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

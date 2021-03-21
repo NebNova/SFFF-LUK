@@ -80,12 +80,10 @@ collision_mask = 257
 script = ExtResource( 3 )
 
 [node name="dust_bunny_cropped" type="Sprite" parent="."]
-position = Vector2( 0, -69.9913 )
 texture = ExtResource( 1 )
 
 [node name="dust bunny ears cropped" type="Sprite" parent="dust_bunny_cropped"]
-position = Vector2( 169.014, -417.103 )
-rotation = 0.605629
+position = Vector2( 0.834351, -447.375 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
