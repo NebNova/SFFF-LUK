@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/assets/graphics/background.png" type="Texture" id=1]
 [ext_resource path="res://src/assets/graphics/deaths.png" type="Texture" id=2]
@@ -7,10 +7,23 @@
 [ext_resource path="res://src/UI/Exit.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/UI/Title.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/UI/Retry.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/UI/MenuButton.gd" type="Script" id=8]
+[ext_resource path="res://src/assets/graphics/main menu.png" type="Texture" id=9]
+[ext_resource path="res://src/assets/scripts/EndScreen.gd" type="Script" id=10]
+[ext_resource path="res://Hello Mozza.ttf" type="DynamicFontData" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 11 )
 
 [node name="EndScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -57,26 +70,28 @@ __meta__ = {
 }
 
 [node name="Retry" parent="Menu" instance=ExtResource( 7 )]
-margin_right = 480.0
+margin_right = 783.0
 margin_bottom = 246.0
 
 [node name="Menu" parent="Menu" instance=ExtResource( 4 )]
 margin_top = 250.0
-margin_right = 480.0
-margin_bottom = 509.0
+margin_right = 783.0
+margin_bottom = 481.0
+icon = ExtResource( 9 )
+script = ExtResource( 8 )
 
 [node name="Exit" parent="Menu" instance=ExtResource( 5 )]
-margin_top = 513.0
-margin_right = 480.0
-margin_bottom = 765.0
+margin_top = 485.0
+margin_right = 783.0
+margin_bottom = 737.0
 
 [node name="Score" type="Sprite" parent="."]
-position = Vector2( 259.697, 200 )
+position = Vector2( 262.367, 206.674 )
 scale = Vector2( 0.17662, 0.221 )
 texture = ExtResource( 3 )
 
 [node name="Death" type="Sprite" parent="."]
-position = Vector2( 677.085, 200 )
+position = Vector2( 678.42, 206.674 )
 scale = Vector2( 0.192897, 0.19992 )
 texture = ExtResource( 2 )
 
@@ -85,6 +100,9 @@ margin_left = 311.0
 margin_top = 183.0
 margin_right = 384.0
 margin_bottom = 222.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "%s"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -94,3 +112,9 @@ margin_left = 722.0
 margin_top = 183.0
 margin_right = 787.0
 margin_bottom = 215.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "%s"
+__meta__ = {
+"_edit_use_anchors_": false
+}

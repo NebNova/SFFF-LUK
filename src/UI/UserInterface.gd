@@ -3,12 +3,13 @@ extends Control
 onready var scene_tree: = get_tree()
 onready var pause_overlay: ColorRect = get_node("PauseOverlay")
 onready var score: Label = get_node("Label")
+onready var pauseScore: Label = get_node("PauseOverlay/Score/ScoreNum")
+onready var pauseDeath: Label = get_node("PauseOverlay/Death/DeathNum")
 
 var paused: = false setget set_paused
 
 func _ready() -> void:
 	PlayerData.connect("score_updated", self, "update_interface")
-	PlayerData.connect("player_died", self, "_on_PlayerData_player_died")
 	update_interface()
 	
 
@@ -19,8 +20,11 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func update_interface() -> void:
 	score.text = "%s" % PlayerData.score
+	pauseScore.text = "%s" % PlayerData.score
+	pauseDeath.text = "%s" % PlayerData.deaths
 
 func set_paused(value: bool) -> void:
 	paused = value
 	scene_tree.paused = value
 	pause_overlay.visible = value
+	get_node("Label").visible = not value
