@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/assets/background.png" type="Texture" id=1]
 [ext_resource path="res://src/assets/audio/rainbowicecreamedit.ogg" type="AudioStream" id=2]
+[ext_resource path="res://src/Main Scenes/background.gd" type="Script" id=3]
 
 [node name="Background" type="Node2D"]
 scale = Vector2( 0.185, 0.185 )
@@ -9,10 +10,22 @@ scale = Vector2( 0.185, 0.185 )
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 1643.34, 1638.2 )
 texture = ExtResource( 1 )
+script = ExtResource( 3 )
 
 [node name="background2" type="Sprite" parent="."]
 position = Vector2( 4943.31, 1638.2 )
 texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="background3" type="Sprite" parent="."]
+position = Vector2( 8243.31, 1638.2 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="background4" type="Sprite" parent="."]
+position = Vector2( 11543.3, 1638.2 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 2 )
