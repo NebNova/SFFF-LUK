@@ -1,0 +1,103 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/UI/ExitButton.gd" type="Script" id=1]
+[ext_resource path="res://src/UI/Title.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/UI/Exit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/UI/Play.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/UI/PlayFromPause.gd" type="Script" id=5]
+[ext_resource path="res://src/assets/graphics/deaths.png" type="Texture" id=6]
+[ext_resource path="res://src/assets/graphics/exit cropped.png" type="Texture" id=7]
+[ext_resource path="res://src/assets/graphics/play cropped.png" type="Texture" id=8]
+[ext_resource path="res://src/assets/graphics/score.png" type="Texture" id=9]
+
+[node name="UserInterface" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 931.804
+margin_top = 23.0173
+margin_right = 993.804
+margin_bottom = 37.0173
+text = "score: %s"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.235294 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="ColorRect" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -86.0
+margin_top = 177.99
+margin_right = 86.0
+margin_bottom = 191.99
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Paused" type="Label" parent="ColorRect"]
+margin_left = 477.014
+margin_top = 101.975
+margin_right = 527.014
+margin_bottom = 115.975
+text = "Paused!"
+
+[node name="Score" type="Sprite" parent="ColorRect"]
+position = Vector2( 357.322, 300 )
+scale = Vector2( 0.17662, 0.221 )
+texture = ExtResource( 9 )
+
+[node name="Death" type="Sprite" parent="ColorRect"]
+position = Vector2( 624.701, 300 )
+scale = Vector2( 0.192897, 0.19992 )
+texture = ExtResource( 6 )
+
+[node name="Menu" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -51.5488
+margin_top = 51.0204
+margin_right = 350.451
+margin_bottom = 566.02
+rect_scale = Vector2( 0.25, 0.25 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="ColorRect/Menu" instance=ExtResource( 4 )]
+margin_right = 402.0
+margin_bottom = 259.0
+icon = ExtResource( 8 )
+flat = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="ColorRect/Menu" instance=ExtResource( 3 )]
+margin_top = 263.0
+margin_right = 402.0
+margin_bottom = 515.0
+icon = ExtResource( 7 )
+flat = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="ColorRect/Menu/Menu" to="ColorRect/Menu/Menu" method="_on_Play_button_up"]
+[connection signal="button_up" from="ColorRect/Menu/Exit" to="ColorRect/Menu/Exit" method="_on_Exit_button_up"]

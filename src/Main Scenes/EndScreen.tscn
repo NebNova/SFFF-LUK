@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/assets/graphics/background.png" type="Texture" id=1]
 [ext_resource path="res://src/assets/graphics/deaths.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/UI/Play.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/UI/Exit.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/UI/Title.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/UI/Retry.tscn" type="PackedScene" id=7]
 
 [node name="EndScreen" type="Control"]
 anchor_right = 1.0
@@ -55,9 +56,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Play" parent="Menu" instance=ExtResource( 4 )]
+[node name="Retry" parent="Menu" instance=ExtResource( 7 )]
+
+[node name="Menu" parent="Menu" instance=ExtResource( 4 )]
+margin_top = 24.0
+margin_bottom = 283.0
 
 [node name="Exit" parent="Menu" instance=ExtResource( 5 )]
+margin_top = 287.0
+margin_bottom = 539.0
 
 [node name="Score" type="Sprite" parent="."]
 position = Vector2( 259.697, 200 )
