@@ -24,6 +24,10 @@ config/name="Legend of the Unicorn King"
 run/main_scene="res://src/Main Scenes/MainScreen.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerData="*res://src/Main Scenes/PlayerData.tscn"
+
 [gdnative]
 
 singletons=[ "res://git_api.gdnlib" ]
