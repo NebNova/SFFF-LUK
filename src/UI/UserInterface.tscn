@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/UI/UserInterface.gd" type="Script" id=1]
 [ext_resource path="res://src/UI/Title.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/UI/PlayFromPause.gd" type="Script" id=5]
 [ext_resource path="res://src/assets/graphics/deaths.png" type="Texture" id=6]
 [ext_resource path="res://src/assets/graphics/paused.png" type="Texture" id=7]
+[ext_resource path="res://src/assets/graphics/main menu.png" type="Texture" id=8]
 [ext_resource path="res://src/assets/graphics/score.png" type="Texture" id=9]
 
 [node name="UserInterface" type="Control"]
@@ -65,10 +66,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -51.5488
-margin_top = 51.0204
-margin_right = 350.451
-margin_bottom = 566.02
+margin_left = -109.549
+margin_top = 53.0204
+margin_right = 673.451
+margin_bottom = 568.02
 rect_scale = Vector2( 0.25, 0.25 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -77,8 +78,12 @@ __meta__ = {
 }
 
 [node name="Menu" parent="PauseOverlay/Menu" instance=ExtResource( 4 )]
-margin_right = 401.0
+margin_right = 783.0
+margin_bottom = 231.0
+icon = ExtResource( 8 )
 script = ExtResource( 5 )
 
 [node name="Exit" parent="PauseOverlay/Menu" instance=ExtResource( 3 )]
-margin_right = 401.0
+margin_top = 235.0
+margin_right = 783.0
+margin_bottom = 487.0

@@ -4,7 +4,7 @@
 [ext_resource path="res://src/UI/PlayButton.gd" type="Script" id=2]
 
 [node name="Play" type="Button"]
-margin_right = 402.0
+margin_right = 371.0
 margin_bottom = 259.0
 icon = ExtResource( 1 )
 flat = true

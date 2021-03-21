@@ -60,6 +60,7 @@ autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+volume_db = -20.0
 autoplay = true
 [connection signal="timeout" from="Evniroment spawner/FOTimer" to="Evniroment spawner" method="_on_FOTimer_timeout"]
 [connection signal="timeout" from="Evniroment spawner/attackTimer" to="Evniroment spawner" method="_on_attackTimer_timeout"]
