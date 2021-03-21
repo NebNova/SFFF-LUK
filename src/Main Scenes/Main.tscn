@@ -9,7 +9,7 @@
 [ext_resource path="res://src/assets/audio/rainbowicecream2.ogg" type="AudioStream" id=7]
 [ext_resource path="res://src/assets/audio/rainbowicecream3.ogg" type="AudioStream" id=8]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "endMusic"
 tracks/0/type = "audio"
 tracks/0/path = NodePath("EndMusic")
@@ -26,7 +26,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "midMusic"
 tracks/0/type = "audio"
 tracks/0/path = NodePath("MiddleMusic")
@@ -43,8 +43,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "startMusic"
+[sub_resource type="Animation" id=3]
 tracks/0/type = "audio"
 tracks/0/path = NodePath("StartMusic")
 tracks/0/interp = 1
@@ -113,9 +112,9 @@ autostart = true
 
 [node name="MusicPlayer" type="AnimationPlayer" parent="."]
 autoplay = "startMusic"
-anims/endMusic = SubResource( 2 )
-anims/midMusic = SubResource( 3 )
-anims/startMusic = SubResource( 1 )
+anims/endMusic = SubResource( 1 )
+anims/midMusic = SubResource( 2 )
+anims/startMusic = SubResource( 3 )
 
 [node name="musicTimer" type="Timer" parent="."]
 wait_time = 5.0
