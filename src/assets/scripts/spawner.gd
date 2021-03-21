@@ -30,7 +30,7 @@ func _ready() -> void:
 	yield(get_tree().create_timer(5.0), "timeout")
 	spawnDino()
 	yield(get_tree().create_timer(5.0), "timeout")
-	spawnGold(
+	spawnGold()
 
 func spawnFallingObject() -> void:
 	randomize() # Randomize RNG
