@@ -14,10 +14,13 @@ var rng = RandomNumberGenerator.new() # New RNG
 
 onready var FOspawnPos = get_node("FallingObject").position # Gets spawn position for falling objects
 onready var sockPos = get_node("Sock").position
+onready var dustPos = get_node("dust").position
 
 func _ready() -> void:
 	yield(get_tree().create_timer(5.0), "timeout")
 	spawnSock() # Calls Sock spawn fucntion
+	yield(get_tree().create_timer(5.0), "timeout")
+	spawnDust()
 
 func spawnFallingObject() -> void:
 	randomize() # Randomize RNG
@@ -31,6 +34,11 @@ func spawnSock() -> void:
 	var sockSpawn = sock.instance()
 	sockSpawn.position = sockPos
 	add_child(sockSpawn)
+
+func spawnDust() -> void:
+	var dustSpawn = dustB.instance()
+	dustSpawn.position = dustPos
+	add_child(dustSpawn)
 
 func _on_Timer_timeout() -> void:
 	spawnFallingObject() # Calls object spawn on timer timout

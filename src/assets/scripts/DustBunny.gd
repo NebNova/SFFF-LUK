@@ -13,4 +13,4 @@ func _physics_process(_delta):
 func _on_Area2D_area_entered(area: Area2D) -> void:
 	print(area.name)
 	if area.name == "Despawn":
-		queue_free()
+		queue_free() # Replace with function body.

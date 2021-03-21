@@ -14,13 +14,13 @@ extents = Vector2( 1784.78, 109.795 )
 
 [node name="Walls" type="Node2D"]
 
-[node name="Desapwn" type="Area2D" parent="."]
+[node name="Despawn" type="Area2D" parent="."]
 position = Vector2( -140.716, 50.8338 )
 scale = Vector2( 0.315, 0.184187 )
 collision_layer = 256
 collision_mask = 3710
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Desapwn"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Despawn"]
 position = Vector2( 515.969, 1333.89 )
 shape = SubResource( 1 )
 
@@ -38,14 +38,19 @@ shape = SubResource( 2 )
 position = Vector2( 116.107, 1850.88 )
 shape = SubResource( 3 )
 
-[node name="Floor" type="CollisionShape2D" parent="wall"]
-position = Vector2( 1824.39, 3565.06 )
-shape = SubResource( 4 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Ceiling" type="StaticBody2D" parent="."]
 collision_layer = 4096
 
-[node name="Ceiling" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="Ceiling" type="CollisionShape2D" parent="Ceiling"]
 position = Vector2( 522.08, -18.3438 )
+scale = Vector2( 0.315, 0.184187 )
+shape = SubResource( 4 )
+
+[node name="Floor" type="StaticBody2D" parent="."]
+collision_layer = 8192
+collision_mask = 1633
+
+[node name="Floor" type="CollisionShape2D" parent="Floor"]
+position = Vector2( 520.902, 618.017 )
 scale = Vector2( 0.315, 0.184187 )
 shape = SubResource( 4 )

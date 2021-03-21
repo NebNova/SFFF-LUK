@@ -126,6 +126,7 @@ laser={
 2d_physics/layer_11="Domino"
 2d_physics/layer_12="PowerUp"
 2d_physics/layer_13="Ceiling"
+2d_physics/layer_14="Floor"
 
 [rendering]
 

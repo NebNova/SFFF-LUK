@@ -3,7 +3,6 @@
 [ext_resource path="res://src/assets/domino_2.png" type="Texture" id=1]
 [ext_resource path="res://src/assets/scripts/fallingObject.gd" type="Script" id=2]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 94.3491
 height = 178.878
@@ -11,7 +10,7 @@ height = 178.878
 [node name="Domino" type="RigidBody2D"]
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 1024
-collision_mask = 129
+collision_mask = 8321
 contacts_reported = 1
 contact_monitor = true
 script = ExtResource( 2 )

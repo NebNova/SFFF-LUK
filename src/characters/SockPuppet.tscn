@@ -37,7 +37,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="CapsuleShape2D" id=3]
-radius = 51.953
+radius = 56.5447
 height = 107.558
 
 [node name="SockPuppet" type="KinematicBody2D"]
@@ -53,14 +53,17 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -14.3027, 29.1352 )
 shape = SubResource( 1 )
+disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Sock Puppet Bite"
 "anims/Sock Puppet Bite" = SubResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 257
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -14.2705, 29.1356 )
 shape = SubResource( 3 )
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
