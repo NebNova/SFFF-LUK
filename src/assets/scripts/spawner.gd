@@ -48,22 +48,22 @@ func spawnFallingObject() -> void:
 	add_child(FOSpawn) # Add spawned object as child node
 
 func spawnAttacker() -> void:
-	if spawns == 0 or spawns == 4:
+	if spawns == 0:
 		var sockSpawn = sock.instance()
 		sockSpawn.position = sockPos
 		add_child(sockSpawn)
 		spawns += 1
-	elif spawns == 1 or spawns == 5:
+	elif spawns == 1:
 		var dustSpawn = dustB.instance()
 		dustSpawn.position = dustPos
 		add_child(dustSpawn)
 		spawns += 1
-	elif spawns == 2 or spawns == 6:
+	elif spawns == 2:
 		var dinoSpawn = dino.instance()
 		dinoSpawn.position = dinoPos
 		add_child(dinoSpawn)
 		spawns += 1
-	elif spawns == 3 or spawns == 7:
+	elif spawns == 3:
 		var goldSpawn = goldF.instance()
 		goldSpawn.position = goldPos
 		add_child(goldSpawn)
@@ -104,12 +104,12 @@ func _on_FOTimer_timeout() -> void:
 	spawnFallingObject()
 
 func _on_increaseDifficultyTimer_timeout() -> void:
-	if diffHC <= 35:
+	if diffHC <= 14:
 		print(diffHC)
 		diffHC += 1
-		FOTime -= 0.03
+		FOTime -= 0.1
 		print(FOTime)
-		attackTime -= 0.2
+		attackTime -= 0.7
 		print(attackTime)
 		get_node("FOTimer").start(FOTime)
 		get_node("attackTimer").start(attackTime)
