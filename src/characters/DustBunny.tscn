@@ -2,7 +2,7 @@
 
 [ext_resource path="res://src/assets/dust bunny no ears cropped.png" type="Texture" id=1]
 [ext_resource path="res://src/assets/dust bunny ears cropped.png" type="Texture" id=2]
-[ext_resource path="res://src/assets/scripts/DustBunny.gd" type="Script" id=3]
+[ext_resource path="res://src/assets/scripts/AttackChar.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 481.179

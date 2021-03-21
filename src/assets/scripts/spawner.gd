@@ -16,6 +16,7 @@ onready var FOspawnPos = get_node("FallingObject").position # Gets spawn positio
 onready var sockPos = get_node("Sock").position
 onready var dustPos = get_node("dust").position
 onready var dinoPos = get_node("dino").position
+onready var goldPos = get_node("gold").position
 
 func _ready() -> void:
 	yield(get_tree().create_timer(5.0), "timeout")
@@ -23,9 +24,13 @@ func _ready() -> void:
 	yield(get_tree().create_timer(5.0), "timeout")
 	spawnDust()
 	yield(get_tree().create_timer(5.0), "timeout")
+	spawnGold()
+	yield(get_tree().create_timer(5.0), "timeout")
 	spawnSock() # Calls Sock spawn fucntion
 	yield(get_tree().create_timer(5.0), "timeout")
 	spawnDino()
+	yield(get_tree().create_timer(5.0), "timeout")
+	spawnGold(
 
 func spawnFallingObject() -> void:
 	randomize() # Randomize RNG
@@ -49,6 +54,11 @@ func spawnDino() -> void:
 	var dinoSpawn = dino.instance()
 	dinoSpawn.position = dinoPos
 	add_child(dinoSpawn)
+
+func spawnGold() -> void:
+	var goldSpawn = goldF.instance()
+	goldSpawn.position = goldPos
+	add_child(goldSpawn)
 
 func _on_Timer_timeout() -> void:
 	spawnFallingObject() # Calls object spawn on timer timout
