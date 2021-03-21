@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/softerthud.ogg-b7f41741442c6a5f086a5c409c869c8c.oggstr"
+
+[deps]
+
+source_file="res://src/assets/audio/softerthud.ogg"
+dest_files=[ "res://.import/softerthud.ogg-b7f41741442c6a5f086a5c409c869c8c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
