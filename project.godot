@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="Legend of the Unicorn King"
 run/main_scene="res://src/Main Scenes/MainScreen.tscn"
-config/icon="res://icon.png"
+config/icon="res://src/assets/graphics/icon.png"
 
 [autoload]
 

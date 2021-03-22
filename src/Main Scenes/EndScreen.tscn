@@ -7,10 +7,12 @@
 [ext_resource path="res://src/UI/Exit.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/UI/Title.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/UI/Retry.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/UI/MenuButton.gd" type="Script" id=8]
+[ext_resource path="res://src/UI/scripts/MenuButton.gd" type="Script" id=8]
 [ext_resource path="res://src/assets/graphics/main menu.png" type="Texture" id=9]
 [ext_resource path="res://src/assets/scripts/EndScreen.gd" type="Script" id=10]
-[ext_resource path="res://Hello Mozza.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://src/assets/fonts/Hello Mozza.ttf" type="DynamicFontData" id=11]
+
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 45

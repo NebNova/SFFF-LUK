@@ -1,15 +1,17 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://src/UI/UserInterface.gd" type="Script" id=1]
+[ext_resource path="res://src/UI/scripts/UserInterface.gd" type="Script" id=1]
 [ext_resource path="res://src/UI/Title.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/UI/Exit.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/UI/Play.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/UI/PlayFromPause.gd" type="Script" id=5]
+[ext_resource path="res://src/UI/scripts/PlayFromPause.gd" type="Script" id=5]
 [ext_resource path="res://src/assets/graphics/deaths.png" type="Texture" id=6]
-[ext_resource path="res://Hello Mozza.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://src/assets/fonts/Hello Mozza.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://src/assets/graphics/paused.png" type="Texture" id=8]
 [ext_resource path="res://src/assets/graphics/score.png" type="Texture" id=9]
 [ext_resource path="res://src/assets/graphics/main menu.png" type="Texture" id=10]
+
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
