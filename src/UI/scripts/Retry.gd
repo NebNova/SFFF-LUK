@@ -1,5 +1,6 @@
 extends Button
 
+# Restarts game after death
 func _on_Retry_button_up() -> void:
 	PlayerData.score = 0
 # warning-ignore:return_value_discarded
